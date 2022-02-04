@@ -544,6 +544,8 @@ img {
 }
 
 .footer-title {
+  display: block;
+
   margin-bottom: 20px;
   color: var(--bgc);
   text-decoration: none;
