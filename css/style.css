@@ -242,11 +242,15 @@ p {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
+.section-work {
+  position: relative;
+}
 .work {
   padding-top: 0px;
 }
 
-.photo {
+.work-photo {
   margin-right: 30px;
 }
 
@@ -264,6 +268,9 @@ img {
 }
 .work-list {
   display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
 }
 .work-title .item {
   margin-right: 30px;
@@ -284,6 +291,28 @@ img {
   line-height: 1.16;
   letter-spacing: 0.03em;
 }
+
+.work-article {
+  display: block;
+
+  position: relative;
+
+  padding: 27px 0;
+  width: 100%;
+
+  background: rgba(47, 48, 58, 0.8);
+  color: white;
+}
+
+.work-p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .team {
   background-color: var(--body-bgc-index);
 }
