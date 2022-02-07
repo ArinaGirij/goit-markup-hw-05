@@ -56,7 +56,20 @@
       <section class="hero">
         <div class="container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button-index">Заказать услугу</button>
+          <button data-modal-open type="button" class="button-index">Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <p> 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptate, corporis doloremque optio neque laborum temporibus 
+                veritatis reiciendis quod illum reprehenderit iste vero ducimus 
+                dolorem quae explicabo totam. Deserunt, cum quas.
+              </p>
+            <button data-modal-close>Закрыть</button>
+            </div>
+
+          </div>
+        
         </div>
         
       </section>  
@@ -412,5 +425,6 @@
       </div>
       
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
