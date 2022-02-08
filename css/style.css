@@ -594,11 +594,31 @@ img {
 }
 
 .card-item {
-  background: #ffffff;
+  position: relative;
 
   margin-left: var(--card-set-gap);
   margin-bottom: var(--card-set-gap);
   flex-basis: calc(100% / 3 - var(--card-set-gap));
+}
+
+.card-item::before {
+  display: flex;
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  opacity: 0;
+
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.card-item:hover::before {
+  position: absolute;
+
+  opacity: 1;
 }
 .card-item:hover {
   border: 1px solid #eeeeee;
