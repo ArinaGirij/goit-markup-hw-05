@@ -86,7 +86,7 @@ p {
   margin-right: 0px;
 }
 
-.site-nav-item ::after {
+.site-nav-item::after {
   content: "";
   display: block;
 
@@ -477,6 +477,7 @@ img {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-link:hover,
