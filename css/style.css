@@ -477,7 +477,7 @@ img {
 
 .section-clients {
   padding-top: 94px;
-  padding-bottom: 50px;
+  padding-bottom: 94px;
 }
 .clients {
   display: flex;
@@ -690,8 +690,6 @@ img {
   margin-left: 70px;
 }
 .footer-nav {
-  margin-right: 70px;
-
   color: var(--accent-color);
   text-decoration: none;
   font-style: normal;
@@ -712,7 +710,7 @@ img {
   margin-bottom: 9px;
 }
 
-.adress-item :last-child {
+.adress-item:last-child {
   margin-bottom: 0px;
 }
 
