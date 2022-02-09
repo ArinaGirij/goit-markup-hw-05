@@ -190,7 +190,7 @@ p {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/main-background.png);
+    url(../images/background.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -599,17 +599,27 @@ img {
 }
 
 .card-item {
-  position: relative;
-  cursor: pointer;
-
   border: 1px solid #eeeeee;
 
   margin-left: var(--card-set-gap);
   margin-bottom: var(--card-set-gap);
   flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
+.card-link {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.02em;
+}
 
-.card-item::before {
+.card-div {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card-div::before {
   display: flex;
   position: absolute;
   content: "";
@@ -618,22 +628,21 @@ img {
   left: 0;
   width: 370px;
   height: 294px;
-  opacity: 0;
+  transform: translateY(100%);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background: rgba(33, 150, 243, 0.9);
 }
 
-.card-item:hover::before {
-  position: absolute;
-
-  opacity: 1;
+.card-div:hover::before,
+.card-div:focus::before {
+  transform: translateY(0);
 }
-.card-item:hover {
- box-shadow: ;0px 1px 1px rgb(0 0 0 / 12%),
-   0px 4px 4px rgb(0 0 0 / 6%), 
-   1px 4px 6px rgb(0 0 0 / 16%);
+.card-item:hover,
+.card-item:focus {
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
+    1px 4px 6px rgb(0 0 0 / 16%);
 }
 
 .card-paragraph {
@@ -648,8 +657,8 @@ img {
 
   position: absolute;
 
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-paragraph:hover {
@@ -782,15 +791,6 @@ img {
 .all-button {
   margin-bottom: 50px;
   display: flex;
-}
-
-.photo {
-  color: var(--primary-text-color);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.02em;
 }
 
 .text-img {
