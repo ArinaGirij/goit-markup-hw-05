@@ -655,6 +655,8 @@ img {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
 .card-link {
+  display: block;
+
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -689,8 +691,8 @@ img {
   transform: translateY(0);
 }
 
-.card-item:hover,
-.card-item:focus {
+.card-link:hover,
+.card-link:focus {
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
     1px 4px 6px rgb(0 0 0 / 16%);
 }
@@ -711,10 +713,9 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-paragraph:hover {
-  opacity: 1;
-
-  color: #fff;
+.card-paragraph:hover .card-link::before,
+.card-paragraph:focus .card-link::before {
+  transform: translateY(0);
 }
 .cards {
   padding-top: 20px;
@@ -836,6 +837,8 @@ img {
   height: 20px;
   fill: white;
 }
+
+.footer
 /* Portfolio 
   primary-text-color: #212121;
   secondary-text-color: #757575;
